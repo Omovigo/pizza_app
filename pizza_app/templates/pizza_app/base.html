@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
+    </head>
+    <body>
+        <div>
+            <nav>
+                <label><a href="{% url 'pizza_app:index' %}">PZ HOUSE</a></label>
+                <ul>
+                    <li>signin</li>
+                    <li>register</li>
+                </ul>
+            </nav>
+        </div>
+        {% block content %}{% endblock content %}
+        <div>
+            <footer>
+                <section>
+                    <h3>menu</h3>
+                    <ul>
+                        <li>pizza</li>
+                        <li>sides</li>
+                        <li>drinks</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>about</h3>
+                    <ul>
+                        <li>about us</li>
+                        
+                    </ul>
+                </section>
+                <section>
+                    <h3>services</h3>
+                    <ul>
+                        <li>services 1</li>
+                        
+                    </ul>
+                </section>
+                <section>
+                    <h3>customer support</h3>
+                    <ul>
+                        <li>customer support 1</li>
+                    </ul>
+                </section>
+            </footer>
+        </div>
+    </body>
+</html>

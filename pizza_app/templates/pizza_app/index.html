@@ -1,9 +1,15 @@
+{% extends "pizza_app/base.html" %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>index</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
     </head>
     <body>
+        
+        {% block content %}
         <p>hello world</p>
+        {% endblock content %}
     </body>
 </html>
