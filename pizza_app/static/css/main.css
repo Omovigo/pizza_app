@@ -6,7 +6,7 @@ body {
 }
 
 nav {
-    background-color: #333; /* Dark background color for the navigation bar */
+    background-color: white; /* Dark background color for the navigation bar */
     height: 80px;
     width: 100%;
     display: flex; /* To make the logo and links align horizontally */
@@ -14,13 +14,15 @@ nav {
     align-items: center; /* To vertically center elements */
 }
 
-label.logo {
+label.logo a {
+    text-decoration: none;
     color: red;
     font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
     margin-left: 20px;
 }
+
 
 nav ul {
     list-style: none;
@@ -45,17 +47,22 @@ footer {
     background-color: #333; /* Dark background color for the footer */
     color: white;
     padding: 20px;
-    text-align: center;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    
 }
 
 footer ul {
     list-style: none;
     padding: 0;
+    display: grid; /* Use CSS Grid for the footer */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Create columns with a minimum width of 200px and a maximum of 1fr */
+    grid-gap: 20px; /* Add gap between grid items */
 }
 
 footer ul li {
-    display: inline;
-    margin: 0 10px;
+    display: block;
 }
 
 footer ul li a {
@@ -65,4 +72,53 @@ footer ul li a {
 
 footer ul li a:hover {
     color: #ff0000; /* Change link color on hover */
+}
+
+.container{
+    display: flex;
+    padding: 0;
+}
+
+.menu{
+    flex-grow: 1;
+    flex-basis: 60%;
+}
+.about{
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+.services{
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+.customer{
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+.menu p{
+    line-height: 1;
+}
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    /* Adjust styles for screens with a maximum width of 768px (e.g., tablets and mobile devices) */
+
+    /* Reduce the height of the navigation bar for smaller screens */
+    nav {
+        height: 60px;
+    }
+
+    /* Center the logo in the navigation bar for smaller screens */
+    label.logo {
+        margin: 0 auto;
+    }
+
+    /* Make the navigation links appear in a vertical list for smaller screens */
+    nav ul {
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
 }
