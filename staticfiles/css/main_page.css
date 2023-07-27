@@ -1,0 +1,19 @@
+/* Add your custom styles specific to index.html here */
+.baseline {
+    background-color: white;
+    color: red;
+    margin: 30px auto; /* Center the container horizontally using 'auto' for left and right margins */
+    padding: 5px 5px;
+    text-align: center;
+}
+
+.green_button {
+    background-color: rgb(32, 211, 32);
+    padding: 10px 150px;
+    height: 35px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    display: block; /* Set the button to be a block-level element */
+    margin: 0 auto; /* Center the button horizontally using 'auto' for left and right margins */
+    cursor: pointer;
+}

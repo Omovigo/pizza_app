@@ -1,0 +1,29 @@
+{% extends "pizza_app/base.html" %}
+<head>
+    <title>drinks</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/child_page.css' %}" type="text/css">
+
+</head>
+{% block content %}
+<nav class="navigation">
+    <ul class="unorder">
+        <a href="{% url 'pizza_app:pizza_page' %}"><li>pizza</li></a>
+        <a href="{% url 'pizza_app:side_page' %}"><li>sides</li></a>
+        <a href="{% url 'pizza_app:drink_page' %}"><li>drinks</li></a>
+    </ul>
+</nav>
+<div class="pizza-container">
+    {% for drink in drink_page %}
+    <div class="pizza-box">
+        <img src="{{ drink.image.url }}" alt="{{ drink.name }}">
+        <h3>{{ drink.name }}</h3>
+        <p>{{ drink.description }}</p>
+        <a href="#" class="button-container">
+            <button>Add to Cart</button>
+            <span class="price">${{ drink.price }}</span>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
